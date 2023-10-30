@@ -1,0 +1,6 @@
+gr01 KO Missing directory es02/. 
+gr02 KO Unmatched output (0% correct). 
+gr03 KO no es02/hostRenamed.txt was generated. 
+gr04 KO Missing file es02/es02.sh.
+gr05 OK.
+gr06 KO Unmatched output (66% correct). 
