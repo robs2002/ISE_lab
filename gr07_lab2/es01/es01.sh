@@ -1,6 +1,6 @@
 #!/bin/bash
 
-shopt -s extglob
+shopt -s extglob #usato per poter inserire pattern come !(arg1|arg2)
 
 vector_d=($(find . -type d -name gr[0-9][0-9]_lab01 | sort)) #cerco le cartelle con in formato giusto e le ordino
 lenght_v=${#vector_d[*]} #numero di cartelle trovate 
