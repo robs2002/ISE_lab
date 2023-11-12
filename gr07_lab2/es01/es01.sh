@@ -61,7 +61,7 @@ for i in $(seq 0 1 $l_v) #mi sposto nelle cartelle trovate
                 then
 
                 diff_v=$(diff "hostRenamed.txt" "${vector_d[i]}/es02/hostRenamed.txt" | grep "<" | wc -l ) #guardo le differenze tra hostRenamed.txt giusto e quello nella cartella es02 e vedo le righe che sono diverse
-                num_righe=$(wc -l < hostRenamed.txt)
+                num_righe=$(wc -l < hostRenamed.txt)    #righe nel file hostRenamed.txt corretto
                 let "corr = num_righe - $diff_v" #righe corrette
                 if [[ $diff_v == "0" ]] #se non ci sono differenze 
                     then
