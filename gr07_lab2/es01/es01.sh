@@ -9,16 +9,22 @@ let "l_v = $lenght_v -1"
 NEWFILE=report.txt #nome del file di report che creo
 if [[ -f $NEWFILE ]] #controllo se esiste file
     then
-        rm $NEWFILE #se esiste, cancello il file
+    rm $NEWFILE #se esiste, cancello il file
 fi
 touch $NEWFILE #creo il file di report
 
 path=$(pwd) #percorso dove eseguo questo file
 
 for i in $(seq 0 1 $l_v) #mi sposto nelle cartelle trovate
-do
-let "numg = $i +1" #numero del gruppo della cartella in esame
-printf "gr0$numg " >>$NEWFILE 
+    do
+    let "numg = $i +1" #numero del gruppo della cartella in esame
+
+    if [[ numg -lt 10 ]]    #se il numero del gruppo è minore di 10
+        then
+        printf "gr0$numg " >>$NEWFILE 
+    else
+        printf "gr$numg " >>$NEWFILE 
+    fi
 
     if [[ -d ${vector_d[i]}/es02/ ]] #controllo se esiste la cartella es02/
         then
@@ -27,7 +33,7 @@ printf "gr0$numg " >>$NEWFILE
             then
 
             if [[ -f ${vector_d[i]}/es02/host.txt ]] #controllo se esite il file es02/host.txt
-            then
+                then
 
                 if [[ $(diff "host.txt" "${vector_d[i]}/es02/host.txt") ]] #se ci sono differenze tra il mio host.txt e il file es02/host.txt 
                 then
@@ -35,16 +41,15 @@ printf "gr0$numg " >>$NEWFILE
                 fi
 
             else
-                touch "${vector_d[i]}/es02/host.txt" #se non esiste lo creo uguale al mio
-                cp "host.txt" "${vector_d[i]}/es02"
+                cp "host.txt" "${vector_d[i]}/es02" #se non esiste lo creo uguale al mio
             fi
 
             cd ${vector_d[i]}/es02 #vado nella cartella es02 in esame
             
-            rm !("es02.sh"|"host.txt") #rimuovo i file che non sono es02.txt e host.txt
+            rm !("es02.sh"|"host.txt") #rimuovo i file che non sono es02.sh e host.txt
 
             if ! [[ -x ${vector_d[i]}/es02/es02.sh ]]  #se es02.sh non è eseguibile
-            then
+                then
                 chmod +x ./es02.sh #lo rendo eseguibile
             fi
             
@@ -53,22 +58,23 @@ printf "gr0$numg " >>$NEWFILE
             cd $path
 
             if [[ -f ${vector_d[i]}/es02/hostRenamed.txt ]] #controllo se esiste es02/hostRenamed.txt
-            then
-
-            diff_v=$(diff "hostRenamed.txt" "${vector_d[i]}/es02/hostRenamed.txt" | grep "<" | wc -l ) #guardo le differenze tra hostRenamed.txt giusto e quello nella cartella es02 e vedo le righe che sono diverse
-            let "corr = 6 - $diff_v" #righe corrette
-                if [[ $diff_v == "0" ]] #se non ci sono differenze 
                 then
+
+                diff_v=$(diff "hostRenamed.txt" "${vector_d[i]}/es02/hostRenamed.txt" | grep "<" | wc -l ) #guardo le differenze tra hostRenamed.txt giusto e quello nella cartella es02 e vedo le righe che sono diverse
+                num_righe=$(wc -l < hostRenamed.txt)
+                let "corr = num_righe - $diff_v" #righe corrette
+                if [[ $diff_v == "0" ]] #se non ci sono differenze 
+                    then
                     printf "OK.\n" >>$NEWFILE  #i file matchano             
                 else
-                    let "PERCENTUALE = 100 * $corr / 6" #se non matchano calcolo la percentuale righe giuste 
+                    let "PERCENTUALE = 100 * $corr / num_righe" #se non matchano calcolo la percentuale righe giuste 
                     printf "KO Unmatched output (%d%% correct). \n" "$PERCENTUALE" >>$NEWFILE
-                fi
+            fi
 
-           else
+            else
 
-               printf "KO no es02/hostRenamed.txt was generated. \n" >>$NEWFILE 
-           fi
+                printf "KO no es02/hostRenamed.txt was generated. \n" >>$NEWFILE 
+            fi
 
         else
 
