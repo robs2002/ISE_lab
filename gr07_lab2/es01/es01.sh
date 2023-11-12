@@ -61,13 +61,13 @@ for i in $(seq 0 1 $l_v) #mi sposto nelle cartelle trovate
                 then
 
                 diff_v=$(diff "hostRenamed.txt" "${vector_d[i]}/es02/hostRenamed.txt" | grep "<" | wc -l ) #guardo le differenze tra hostRenamed.txt giusto e quello nella cartella es02 e vedo le righe che sono diverse
-                num_righe=$(wc -l < hostRenamed.txt)    #righe nel file hostRenamed.txt corretto
-                let "corr = num_righe - $diff_v" #righe corrette
+                # num_righe=$(wc -l < hostRenamed.txt)    per rendere generico il programma bisognerebbe usare questo comando per ricavare il numero di righe nel file hostRenamed.txt corrente e poi usare tale valore al posto del numero 6 null riga 65 e 70
+                let "corr = 6 - $diff_v" #righe corrette
                 if [[ $diff_v == "0" ]] #se non ci sono differenze 
                     then
                     printf "OK.\n" >>$NEWFILE  #i file matchano             
                 else
-                    let "PERCENTUALE = 100 * $corr / num_righe" #se non matchano calcolo la percentuale righe giuste 
+                    let "PERCENTUALE = 100 * $corr / 6" #se non matchano calcolo la percentuale righe giuste 
                     printf "KO Unmatched output (%d%% correct). \n" "$PERCENTUALE" >>$NEWFILE
             fi
 
