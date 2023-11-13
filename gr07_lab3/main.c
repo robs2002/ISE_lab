@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define dimr 320
-#define dimc 240
+#define dimr 40  //320
+#define dimc 30  //240
 
 int scanfile(FILE *fp, int area[][dimc]);
 
@@ -88,14 +88,14 @@ int scanfile(FILE *fp, int area[dimr][dimc]) {
         } else if (comando=='L') {
 
             fscanf(fp, " %f %f %f %f", &x1, &y1, &x2, &y2);
-            printf("Comando: %c, x1: %f, y1: %f, x2: %f, y2: %f, \n", comando, x1, y1, x2, y2);
+            printf("Comando: %c, x1: %f, y1: %f, x2: %f, y2: %f \n", comando, x1, y1, x2, y2);
 
             xx1= num_int(x1, dimr);
             yy1= num_int(y1, dimc);
             xx2= num_int(x2, dimr);
             yy2= num_int(y2, dimc);
 
-            algoritmo_di_linea(yy1, xx1, yy2, xx2, area);
+            algoritmo_di_linea(xx1, yy1, xx2, yy2, area);
             //bresenham_line(xx1, yy1, xx2, yy2, area);
 
             printf(" xx1: %d, yy1: %d, xx2: %d, yy2: %d \n", xx1, yy1, xx2, yy2);
@@ -106,18 +106,18 @@ int scanfile(FILE *fp, int area[dimr][dimc]) {
 
         }
 
-        printf("Comando: %c, x: %f, y: %f\n", comando, x, y);
+        //printf("Comando: %c, x: %f, y: %f\n", comando, x, y);
     }
     return 0;
 }
 
 //Funzione che descrive l'algoritmo di linea per il comando L
 int algoritmo_di_linea(int x1, int y1, int x2, int y2, int area[][dimc]){
-
+    
     // Assegna le coordinate iniziali
     int DX = x2 - x1;
     int DY = y2 - y1;
-
+    
     // Verifica se è necessario scambiare DX e DY se DY>DX
     int swap = 0;
     if (abs(DX) < abs(DY)) {
@@ -132,6 +132,7 @@ int algoritmo_di_linea(int x1, int y1, int x2, int y2, int area[][dimc]){
 
     int x = x1;
     int y = y1;
+    
 
     int d = 2 * a + b;
 
@@ -141,10 +142,11 @@ int algoritmo_di_linea(int x1, int y1, int x2, int y2, int area[][dimc]){
         q = -1;
     if (y1 > y2)
         s = -1;
-    area[x][y]=1;
-    area[x2][y2]=1;
+    area[x][y]=1;   //assegnazione punto iniziale
+    area[x2][y2]=1; //assegnazione punto finale
 
-    for (int k = 0; k < -b; k += 1) {
+    for (int k = 1; k < -b; k += 1) {
+
         if (d > 0) {
             x = x + q;
             y = y + s;
@@ -157,6 +159,7 @@ int algoritmo_di_linea(int x1, int y1, int x2, int y2, int area[][dimc]){
             }
             d = d + 2 * a;
         }
+        //printf("x: %d, y: %d, k: %d\n", x, y, k);
         area[x][y]=1;
     }
 
@@ -169,7 +172,7 @@ int num_int(float t, int dim) {
     int s;
     float t_molt;
 
-    t_molt= t*dim;
+    t_molt= t*(dim-1);
 
     s=roundf(t_molt);
 
@@ -179,8 +182,8 @@ int num_int(float t, int dim) {
 
 // Funzione per stampare l'area con i punti disegnati
 int stampaArea(int area[][dimc]) {
-    for (int i = 0; i < dimr; i++) {
-        for (int j = 0; j < dimc; j++) {
+    for (int i = 0; i < dimc; i++) {
+        for (int j = 0; j < dimr; j++) {
             if (area[j][i] == 1) {
                 printf(".");  // Punto
             } else {
@@ -193,5 +196,3 @@ int stampaArea(int area[][dimc]) {
     return 0;
 
 }
-
-
