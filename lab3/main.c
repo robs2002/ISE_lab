@@ -4,35 +4,40 @@
 #include "scanoffile.h"
 #include "algoritmo.h"
 #include "intero.h"
-#include "openfile.h"
 #include "stampa.h"
 
 
-#define dimr 40  //320
-#define dimc 30  //240
+#define dimr 40  //dimensione righe generica
+#define dimc 30  //dimensione colonne generica
 
 int main() {
 
-    char nomefile[100];
+    char nomefile[100]; // nome del file dal quale voglio leggere le operazioni
 
     //chiedere il nome del file da analizzare
     printf("Hello, write here the name of the file you want to work with:\n");
-    scanf("%s", nomefile);
+    scanf("%s", nomefile); 
+    // salvo il nome del file e lo stampo per controllo
+    printf("You inserted the file %s \n", nomefile); 
 
-    printf("You inserted the file %s \n", nomefile);
-
-    FILE *fp = open_file(nomefile);
-
-    //link file da aprire
-    //C:\Users\rober\CLionProjects\es1\grup.txt
+    FILE *fp = fopen(nomefile, "r");
+    
+    if (fp == NULL) {
+        printf("Error opening the file: file not exists or wrong name");
+        return 1;  // Esce dal programma con un codice di errore
+    }
 
     int area[dimr][dimc]={{0}}; //definire matrice tutta a 0
 
-    scanfile(fp, area);
+    scanfile(fp, area); // scansione del file
 
-    stampaArea(area);
+    stampaArea(area); // stampare area creata
 
-    fclose(fp); //chiudere file
+    // Forza la chiusura del file
+    if (fclose(file) != 0) {
+        printf("Error closing the file: impossible to close it");
+        return 1;  // Esce dal programma con un codice di errore
+    }
 
     return 0;
 

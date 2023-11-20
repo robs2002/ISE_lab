@@ -3,16 +3,16 @@
 #include <math.h>
 #include "openfile.h"
 
-#define dimr 40  //320
-#define dimc 30  //240
+#define dimr 40  //dimensione righe generica
+#define dimc 30  //dimensione colonne generica
 
 FILE *open_file(char nomefile[]) {
 
     FILE *file = fopen(nomefile, "r");
-    if (file==NULL) { //controlliamo se il file c'è
+    if (file==NULL) { //controlliamo se il file esiste
 
-        perror("Impossible to open file: wrong name or inesistent file.\n");
-        exit(1);
+        printf("Impossible to open file: wrong name or inesistent file.\n");
+        return 1;
     }
 
     return file;

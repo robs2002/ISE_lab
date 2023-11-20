@@ -3,8 +3,8 @@
 #include <math.h>
 #include "algoritmo.h"
 
-#define dimr 40  //320
-#define dimc 30  //240
+#define dimr 40  //dimensione righe generica
+#define dimc 30  //dimensione colonne generica
 
 int algoritmo_di_linea(int x1, int y1, int x2, int y2, int area[][dimc]){
 
