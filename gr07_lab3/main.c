@@ -27,17 +27,6 @@ int main() {
 
     FILE *fp = open_file(nomefile);
 
-    /*while ((carattere = fgetc(fp)) != EOF) {
-        printf("%c", carattere);
-    }*/
-    /*while (fscanf(fp, " %c %f %f", &comando, &x, &y) == 3) {
-            printf("Comando: %c, x: %f, y: %f\n", comando, x, y);
-        }
-         */
-
-    //link file da aprire
-    //C:\Users\rober\CLionProjects\es1\grup.txt
-
     int area[dimr][dimc]={{0}}; //definire matrice tutta a 0
 
     scanfile(fp, area);
@@ -76,19 +65,19 @@ int scanfile(FILE *fp, int area[dimr][dimc]) {
         if (comando=='P') { //se il comando è P allora la matrice di quella riga e quella colonna è 1
 
             fscanf(fp, " %f %f", &x, &y);
-            printf("Comando: %c, x: %f, y: %f\n", comando, x, y);
+            //printf("Comando: %c, x: %f, y: %f\n", comando, x, y);
 
             xx= num_int(x, dimr);
             yy= num_int(y, dimc);
 
-            printf(" xx: %d, yy: %d\n", xx, yy);
+            //printf(" xx: %d, yy: %d\n", xx, yy);
 
             area[xx][yy]=1;
 
         } else if (comando=='L') {
 
             fscanf(fp, " %f %f %f %f", &x1, &y1, &x2, &y2);
-            printf("Comando: %c, x1: %f, y1: %f, x2: %f, y2: %f \n", comando, x1, y1, x2, y2);
+            //printf("Comando: %c, x1: %f, y1: %f, x2: %f, y2: %f \n", comando, x1, y1, x2, y2);
 
             xx1= num_int(x1, dimr);
             yy1= num_int(y1, dimc);
@@ -98,7 +87,7 @@ int scanfile(FILE *fp, int area[dimr][dimc]) {
             algoritmo_di_linea(xx1, yy1, xx2, yy2, area);
             //bresenham_line(xx1, yy1, xx2, yy2, area);
 
-            printf(" xx1: %d, yy1: %d, xx2: %d, yy2: %d \n", xx1, yy1, xx2, yy2);
+            //printf(" xx1: %d, yy1: %d, xx2: %d, yy2: %d \n", xx1, yy1, xx2, yy2);
 
         } else {
 

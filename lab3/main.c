@@ -34,7 +34,7 @@ int main() {
     stampaArea(area); // stampare area creata
 
     // Forza la chiusura del file
-    if (fclose(file) != 0) {
+    if (fclose(fp) != 0) {
         printf("Error closing the file: impossible to close it");
         return 1;  // Esce dal programma con un codice di errore
     }
