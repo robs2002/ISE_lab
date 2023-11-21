@@ -1,0 +1,22 @@
+DIMENSIONE CODICE	
+CON LINKING DINAMICO 
+size linea
+   text    data     bss     dec     hex filename
+   4492     696       8    5196    144c linea
+
+CON LINKING STATICO
+ size linea
+   text    data     bss     dec     hex filename
+ 916830   23240   23016  963086   eb20e linea
+
+CON LINKING IN ARM EMBEDDED
+ size linea
+   text    data     bss     dec     hex filename
+  94860    2792     264   97916   17e7c linea
+
+Da questo possiamo notare come compliando il codice prodotto con un linking statico abbiamo una dimensione molto minore che se compilassimo in ARM embedded ma sempre minore di una compilazione con il linking dinamico, dove il codice prodotto ha una dimensione massima tra i vari tipi di compilazione.
+Questo succede perchè il linker statico combina le tabelle dei simboli in una tabella unificata risolvendo tutti i simboli, quindi copia tutte le routine di libreria utilizzate nel programma, rendendo il programma eseguibile anche in sistemi integrati senza sistema operativo, ma molto grande. 
+
+
+
+

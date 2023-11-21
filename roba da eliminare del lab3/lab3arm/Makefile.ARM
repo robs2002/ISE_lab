@@ -1,0 +1,17 @@
+linea: main.o stampa.o algoritmo.o scanoffile.o intero.o
+	arm-none-eabi-gcc -o linea main.o stampa.o algoritmo.o scanoffile.o intero.o -lm --specs=rdimon.specs
+
+main.o: main.c stampa.h algoritmo.h scanoffile.h intero.h
+	arm-none-eabi-gcc -c main.c
+
+stampa.o: stampa.c stampa.h
+	arm-none-eabi-gcc -c stampa.c
+
+algoritmo.o: algoritmo.c algoritmo.h
+	arm-none-eabi-gcc -c algoritmo.c
+
+scanoffile.o: scanoffile.c scanoffile.h algoritmo.h intero.h
+	arm-none-eabi-gcc -c scanoffile.c
+
+intero.o: intero.c intero.h
+	arm-none-eabi-gcc -c intero.c
