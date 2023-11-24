@@ -1,3 +1,6 @@
+*.Identifier
+-d USB_DEVICE
+-d Middlewares
 .metadata
 .*
 .directory
