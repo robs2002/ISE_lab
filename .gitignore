@@ -1,0 +1,11 @@
+.metadata
+.*
+.directory
+**/*.ld
+**/*.launch
+**/Drivers/
+**/Debug/
+**/Core/Inc/
+**/Core/Startup/
+
+!.gitignore
