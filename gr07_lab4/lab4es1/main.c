@@ -33,6 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -61,6 +62,10 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
+int val1 = 8;
+int val2 = 4;
+int val3 = 2;
+int val4 = 1;
 
 /* USER CODE END PV */
 
@@ -167,61 +172,70 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int sw1 = LL_GPIO_IsInputPinSet(GPIOB, LL_GPIO_PIN_3);
-  int sw2 = LL_GPIO_IsInputPinSet(GPIOB, LL_GPIO_PIN_4);
-  int sw3 = LL_GPIO_IsInputPinSet(GPIOB, LL_GPIO_PIN_5);
-  int sw4 = LL_GPIO_IsInputPinSet(GPIOB, LL_GPIO_PIN_6);
+  	int sw1 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 3);
+  	int sw2 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 4);
+    int sw3 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 5);
+    int sw4 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 6);
 
-  int val1 = 8;
-  int val2 = 4;
-  int val3 = 2;
-  int val4 = 1;
+    if (sw1 == 0)	val1 = 8000;
+    if (sw2 == 0)	val2 = 4000;
+    if (sw3 == 0)	val3 = 2000;
+    if (sw4 == 0)	val4 = 1000;
 
-  if (sw1 == 1)	val1 = 8000;
-  if (sw2 == 1)	val2 = 4000;
-  if (sw3 == 1)	val3 = 2000;
-  if (sw4 == 1)	val4 = 1000;
+    LL_TIM_WriteReg(TIM4, CCR1, val1);  // set initial threshold CH1
+    LL_TIM_WriteReg(TIM4, CCR2, val2);  // set initial threshold CH2
+    LL_TIM_WriteReg(TIM4, CCR3, val3);  // set initial threshold CH3
+    LL_TIM_WriteReg(TIM4, CCR3, val4);  // set initial threshold CH4
 
-  LL_TIM_WriteReg(TIM4, CCR1, val1);  // set initial threshold CH1
-  LL_TIM_WriteReg(TIM4, CCR2, val2);  // set initial threshold CH2
-  LL_TIM_WriteReg(TIM4, CCR3, val3);  // set initial threshold CH3
-  LL_TIM_WriteReg(TIM4, CCR3, val4);  // set initial threshold CH4
+    LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 1));   // delete OC flag CH1
+    LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 2));   // delete OC flag CH2
+    LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 3));   // delete OC flag CH3
+    LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 4));   // delete OC flag CH4
 
-  LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 1));   // delete OC flag CH1
-  LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 2));   // delete OC flag CH2
-  LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 3));   // delete OC flag CH3
-  LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 4));   // delete OC flag CH4
+    LL_TIM_WriteReg(TIM4, DIER, LL_TIM_ReadReg(TIM4, DIER) | (1 << 1)); // enable interrupt on  CH1
+    LL_TIM_WriteReg(TIM4, DIER, LL_TIM_ReadReg(TIM4, DIER) | (1 << 2)); // enable interrupt on  CH2
+    LL_TIM_WriteReg(TIM4, DIER, LL_TIM_ReadReg(TIM4, DIER) | (1 << 3)); // enable interrupt on  CH3
+    LL_TIM_WriteReg(TIM4, DIER, LL_TIM_ReadReg(TIM4, DIER) | (1 << 4)); // enable interrupt on  CH4
 
-  LL_TIM_WriteReg(TIM4, DIOR, LL_TIM_ReadReg(TIM4, DIOR) | (1 << 1)); // enable interrupt on  CH1
-  LL_TIM_WriteReg(TIM4, DIOR, LL_TIM_ReadReg(TIM4, DIOR) | (1 << 2)); // enable interrupt on  CH2
-  LL_TIM_WriteReg(TIM4, DIOR, LL_TIM_ReadReg(TIM4, DIOR) | (1 << 3)); // enable interrupt on  CH3
-  LL_TIM_WriteReg(TIM4, DIOR, LL_TIM_ReadReg(TIM4, DIOR) | (1 << 4)); // enable interrupt on  CH4
+    LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) | (1 << 0));	// porte IO
+    LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) | (1 << 1));
+    LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) | (1 << 2));
+    LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) | (1 << 3));
 
-  LL_GPIO_WriteReg((GPIO, ) )	// GPIO 0, 1, 2, 3 settati a 0
+    LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 10));  //LED
+    LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 11));
+    LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 12));
+    LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 13));
 
-  LL_TIM_WriteReg(TIM4, CR1, LL_TIM_ReadReg(TIM4, CR1) | 0x1);  // counter enable
+    LL_TIM_WriteReg(TIM4, CR1, LL_TIM_ReadReg(TIM4, CR1) | (1 << 1));  // counter enable
 
 
-  while (1)
-  {
-    /* USER CODE END WHILE */
+    while (1)
+    {
+      /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-	  if (sw1 == 1){
-		  val1 = 8000;
-	  }else{ val1 = 8; }
+      /* USER CODE BEGIN 3 */
 
-	  if (sw2 == 1){
-		  val2 = 4000;
-	  }else{ val2 = 4; }
+      sw1 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 3);
+      sw2 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 4);
+      sw3 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 5);
+      sw4 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 6);
 
-	  if (sw3 == 1){
-		  val3 = 2000;
-	  }else{ val3 = 2; }
+  	  if (sw1 == 0){
+  		  val1 = 8000;
+  	  }else{ val1 = 8; }
 
-	  if (sw4 == 1){
-		  val4 = 1000;
-	  }else{ val4 = 1; }
+  	  if (sw2 == 0){
+  		  val2 = 4000;
+  	  }else{ val2 = 4; }
+
+  	  if (sw3 == 0){
+  		  val3 = 2000;
+  	  }else{ val3 = 2; }
+
+  	  if (sw4 == 0){
+  		  val4 = 1000;
+  	  }else{ val4 = 1; }
   }
   /* USER CODE END 3 */
 }
@@ -241,6 +255,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
@@ -260,6 +275,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -318,6 +334,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 1 */
 
   /* USER CODE END ADC1_Init 1 */
+
   /** Common config
   */
   hadc1.Instance = ADC1;
@@ -339,6 +356,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure the ADC multi-mode
   */
   multimode.Mode = ADC_MODE_INDEPENDENT;
@@ -346,6 +364,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_1;
@@ -381,6 +400,7 @@ static void MX_ADC3_Init(void)
   /* USER CODE BEGIN ADC3_Init 1 */
 
   /* USER CODE END ADC3_Init 1 */
+
   /** Common config
   */
   hadc3.Instance = ADC3;
@@ -402,6 +422,7 @@ static void MX_ADC3_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_14;
@@ -471,6 +492,7 @@ static void MX_DAC1_Init(void)
   /* USER CODE BEGIN DAC1_Init 1 */
 
   /* USER CODE END DAC1_Init 1 */
+
   /** DAC Initialization
   */
   hdac1.Instance = DAC1;
@@ -478,6 +500,7 @@ static void MX_DAC1_Init(void)
   {
     Error_Handler();
   }
+
   /** DAC channel OUT1 config
   */
   sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
@@ -489,6 +512,7 @@ static void MX_DAC1_Init(void)
   {
     Error_Handler();
   }
+
   /** DAC channel OUT2 config
   */
   if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_2) != HAL_OK)
@@ -630,7 +654,7 @@ static void MX_TIM4_Init(void)
   /* USER CODE BEGIN TIM4_Init 1 */
 
   /* USER CODE END TIM4_Init 1 */
-  TIM_InitStruct.Prescaler = 5249;
+  TIM_InitStruct.Prescaler = 4999;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
   TIM_InitStruct.Autoreload = 65535;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
@@ -667,6 +691,8 @@ static void MX_TIM4_Init(void)
 static void MX_GPIO_Init(void)
 {
   LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOE);
@@ -742,6 +768,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -820,4 +848,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-

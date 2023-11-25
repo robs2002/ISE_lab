@@ -41,7 +41,10 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern int val1;
+extern int val2;
+extern int val3;
+extern int val4;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -180,29 +183,34 @@ void TIM1_UP_TIM16_IRQHandler(void)
 void TIM4_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM4_IRQn 0 */
-	if(LL_TIM_IsActiveFlag_CC1(TIM4)){
-			LL_TIM_ClearFlag_CC1(TIM4);
-			LL_TIM_WriteReg(TIM4, CCR1, LL_TIM_ReadReg(TIM4, CCR1) + val1);
-			LL_TIM_WriteReg();	// toogle IO0
+	    if(LL_TIM_IsActiveFlag_CC1(TIM4)){
+				LL_TIM_ClearFlag_CC1(TIM4);
+				LL_TIM_WriteReg(TIM4, CCR1, LL_TIM_ReadReg(TIM4, CCR1) + val1);
+				LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) ^ (1 << 0)); // toggle I00
+				LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 10));	// toggle LED0
+			}
+
+		if(LL_TIM_IsActiveFlag_CC2(TIM4)){
+			LL_TIM_ClearFlag_CC2(TIM4);
+			LL_TIM_WriteReg(TIM4, CCR2, LL_TIM_ReadReg(TIM4, CCR2) + val2);
+			LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) ^ (1 << 1));  //toggle IO1
+			LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 11));	// toggle LED1
+
 		}
-	if(LL_TIM_IsActiveFlag_CC2(TIM4)){
-		LL_TIM_ClearFlag_CC2(TIM4);
-		LL_TIM_WriteReg(TIM4, CCR2, LL_TIM_ReadReg(TIM4, CCR2) + val2);
-		LL_TIM_WriteReg();	// toogle IO1
-
-	}
-	if(LL_TIM_IsActiveFlag_CC3(TIM4)){
-		LL_TIM_ClearFlag_CC3(TIM4);
-		LL_TIM_WriteReg(TIM4, CCR3, LL_TIM_ReadReg(TIM4, CCR3) + val3);
-		LL_TIM_WriteReg();	// toogle IO2
-
-	}
-	if(LL_TIM_IsActiveFlag_CC3(TIM4)){
+		if(LL_TIM_IsActiveFlag_CC3(TIM4)){
 			LL_TIM_ClearFlag_CC3(TIM4);
-			LL_TIM_WriteReg(TIM4, CCR4, LL_TIM_ReadReg(TIM4, CCR4) + val4);
-			LL_TIM_WriteReg();	// toogle IO3
+			LL_TIM_WriteReg(TIM4, CCR3, LL_TIM_ReadReg(TIM4, CCR3) + val3);
+			LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) ^ (1 << 2));  //toggle IO2
+			LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 12));	// toggle LED2
 
 		}
+		if(LL_TIM_IsActiveFlag_CC3(TIM4)){
+				LL_TIM_ClearFlag_CC3(TIM4);
+				LL_TIM_WriteReg(TIM4, CCR4, LL_TIM_ReadReg(TIM4, CCR4) + val4);
+				LL_GPIO_WriteReg(GPIOE, ODR, LL_GPIO_ReadReg(GPIOE, ODR) ^ (1 << 3));  //toggle IO3
+				LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 13));	// toggle LED3
+		}
+
   /* USER CODE END TIM4_IRQn 0 */
   /* USER CODE BEGIN TIM4_IRQn 1 */
 
@@ -226,4 +234,3 @@ void OTG_FS_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-
