@@ -1,31 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2023-11-27T10:54:18.506Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="YxZ727UmTI84JSzgOye-" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-27T11:48:25.299Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Pk_gyAPWkwttoicGUtJ7" version="22.1.4" type="github">
   <diagram name="Pagina-1" id="QzfrIEjI6FItvem-Kdzb">
-    <mxGraphModel dx="4116" dy="1776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="823" dy="355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jNcLTLjzdyArPBF93-8H-157" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-1" target="jNcLTLjzdyArPBF93-8H-155">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-157" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-1" target="jNcLTLjzdyArPBF93-8H-155" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-1" value="START" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-1" value="START" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="860" y="100" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-2" target="jNcLTLjzdyArPBF93-8H-3">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-2" target="jNcLTLjzdyArPBF93-8H-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-2" value="-&amp;nbsp; val1 = variabile globale che contiene il valore che viene incrementato all&#39;output compare del canale 1 del timer 4 ad ogni raggiungimento della soglia. Inizializzo al valore tale da generare un&#39;onda quadra a 1kHz.&lt;br&gt;- val2 = uguale a val1 ma per il canale 2 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 2kHz.&lt;br&gt;- val3 = uguale a val1 ma per il canale 3 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 4kHz.&lt;br&gt;- val4 = uguale a val1 ma per il canale 4 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 8kHz." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-2" value="-&amp;nbsp; val1 = variabile globale che contiene il valore che viene incrementato all&#39;output compare del canale 1 del timer 4 ad ogni raggiungimento della soglia. Inizializzo al valore tale da generare un&#39;onda quadra a 1kHz.&lt;br&gt;- val2 = uguale a val1 ma per il canale 2 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 2kHz.&lt;br&gt;- val3 = uguale a val1 ma per il canale 3 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 4kHz.&lt;br&gt;- val4 = uguale a val1 ma per il canale 4 del timer 4. Inizializzo al valore tale da generare un&#39;onda quadra a 8kHz." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="680" y="400" width="480" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-3" target="jNcLTLjzdyArPBF93-8H-6">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-3" target="jNcLTLjzdyArPBF93-8H-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-3" value="- nella variabile &quot;sw1&quot; salvo il valore logico della porta GPIO connessa allo switch 0&lt;br&gt;- nella variabile &quot;sw2&quot; salvo il valore logico della porta GPIO connessa allo switch 1&lt;br&gt;- nella variabile &quot;sw3&quot; salvo il valore logico della porta GPIO connessa allo switch 2&lt;br&gt;- nella variabile &quot;sw4&quot; salvo il valore logico della porta GPIO connessa allo switch 3" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FF99FF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-3" value="- nella variabile &quot;sw1&quot; salvo il valore logico della porta GPIO connessa allo switch 0&lt;br&gt;- nella variabile &quot;sw2&quot; salvo il valore logico della porta GPIO connessa allo switch 1&lt;br&gt;- nella variabile &quot;sw3&quot; salvo il valore logico della porta GPIO connessa allo switch 2&lt;br&gt;- nella variabile &quot;sw4&quot; salvo il valore logico della porta GPIO connessa allo switch 3" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FF99FF;" parent="1" vertex="1">
           <mxGeometry x="680" y="590" width="480" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-6" target="jNcLTLjzdyArPBF93-8H-7">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-6" target="jNcLTLjzdyArPBF93-8H-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-6" target="jNcLTLjzdyArPBF93-8H-15">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-6" target="jNcLTLjzdyArPBF93-8H-15" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="750" />
@@ -34,19 +34,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-6" value="sw1 == 0" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-6" value="sw1 == 0" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="710" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-7" target="jNcLTLjzdyArPBF93-8H-15">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-7" target="jNcLTLjzdyArPBF93-8H-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-7" value="val1 = valore per generare onda a 1Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-7" value="val1 = valore per generare onda a 1Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="840" y="820" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-15" target="jNcLTLjzdyArPBF93-8H-16">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-15" target="jNcLTLjzdyArPBF93-8H-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-15" target="jNcLTLjzdyArPBF93-8H-21">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-15" target="jNcLTLjzdyArPBF93-8H-21" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="970" />
@@ -55,19 +55,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-15" value="sw1 == 1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-15" value="sw1 == 1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="930" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-16" target="jNcLTLjzdyArPBF93-8H-21">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-16" target="jNcLTLjzdyArPBF93-8H-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-16" value="val2 = valore per generare onda a 2Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-16" value="val2 = valore per generare onda a 2Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="810" y="1040" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-21" target="jNcLTLjzdyArPBF93-8H-22">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-21" target="jNcLTLjzdyArPBF93-8H-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-21" target="jNcLTLjzdyArPBF93-8H-24">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-21" target="jNcLTLjzdyArPBF93-8H-24" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="1190" />
@@ -76,19 +76,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-21" value="sw1 == 2" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-21" value="sw1 == 2" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="1150" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-22" target="jNcLTLjzdyArPBF93-8H-24">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-22" target="jNcLTLjzdyArPBF93-8H-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-22" value="val3 = valore per generare onda a 4Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-22" value="val3 = valore per generare onda a 4Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="810" y="1260" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-24" target="jNcLTLjzdyArPBF93-8H-25">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-24" target="jNcLTLjzdyArPBF93-8H-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-24" target="jNcLTLjzdyArPBF93-8H-29">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-24" target="jNcLTLjzdyArPBF93-8H-29" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="1410" />
@@ -97,110 +97,110 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-24" value="sw1 == 3" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-24" value="sw1 == 3" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="1370" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-25" target="jNcLTLjzdyArPBF93-8H-29">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-25" target="jNcLTLjzdyArPBF93-8H-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-25" value="val4 = valore per generare onda a 8Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-25" value="val4 = valore per generare onda a 8Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="810" y="1480" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-29" target="jNcLTLjzdyArPBF93-8H-44">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-29" target="jNcLTLjzdyArPBF93-8H-44" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-29" value="- impostare il valore iniziale della soglia per ognuno dei canali del timer 4 utilizzando le variabili &quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot; e &quot;val4&quot;&lt;br&gt;- eliminare il flag dell&#39;output compare per ogni canale del timer 4&lt;br&gt;- attivare l&#39;interrupt dell&#39;output compare per ogni canale del timer 4&lt;br&gt;- settare a livello logico alto le porte GPIO &quot;IO0&quot;, &quot;IO1&quot;, &quot;IO2&quot; e &quot;IO3&quot;&lt;br&gt;- settare a livello logico alto le porte GPIO associate al LED0, LED1, LED2 e LED3&lt;br&gt;- attivare il contatore del timer 4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-29" value="- impostare il valore iniziale della soglia per ognuno dei canali del timer 4 utilizzando le variabili &quot;val1&quot;, &quot;val2&quot;, &quot;val3&quot; e &quot;val4&quot;&lt;br&gt;- eliminare il flag dell&#39;output compare per ogni canale del timer 4&lt;br&gt;- attivare l&#39;interrupt dell&#39;output compare per ogni canale del timer 4&lt;br&gt;- settare a livello logico alto le porte GPIO &quot;IO0&quot;, &quot;IO1&quot;, &quot;IO2&quot; e &quot;IO3&quot;&lt;br&gt;- settare a livello logico alto le porte GPIO associate al LED0, LED1, LED2 e LED3&lt;br&gt;- attivare il contatore del timer 4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="680" y="1590" width="480" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-35" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-35" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="870" y="780" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-36" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-36" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="870" y="1002" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-37" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-37" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="870" y="1220" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-38" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-38" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="870" y="1440" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-39" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-39" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1010" y="1410" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-40" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-40" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1010" y="1190" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-41" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-41" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1010" y="970" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-42" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-42" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1010" y="750" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-44" target="jNcLTLjzdyArPBF93-8H-47">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-44" target="jNcLTLjzdyArPBF93-8H-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-44" value="- nella variabile &quot;sw1&quot; salvo il valore logico della porta GPIO connessa allo switch 0&lt;br&gt;- nella variabile &quot;sw2&quot; salvo il valore logico della porta GPIO connessa allo switch 1&lt;br&gt;- nella variabile &quot;sw3&quot; salvo il valore logico della porta GPIO connessa allo switch 2&lt;br&gt;- nella variabile &quot;sw4&quot; salvo il valore logico della porta GPIO connessa allo switch 3" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FF99FF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-44" value="- nella variabile &quot;sw1&quot; salvo il valore logico della porta GPIO connessa allo switch 0&lt;br&gt;- nella variabile &quot;sw2&quot; salvo il valore logico della porta GPIO connessa allo switch 1&lt;br&gt;- nella variabile &quot;sw3&quot; salvo il valore logico della porta GPIO connessa allo switch 2&lt;br&gt;- nella variabile &quot;sw4&quot; salvo il valore logico della porta GPIO connessa allo switch 3" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FF99FF;" parent="1" vertex="1">
           <mxGeometry x="680" y="1770" width="480" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-47" target="jNcLTLjzdyArPBF93-8H-49">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-47" target="jNcLTLjzdyArPBF93-8H-49" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="800" y="1950" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-47" value="sw1 == 0" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-47" value="sw1 == 0" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="1890" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-49" target="jNcLTLjzdyArPBF93-8H-52">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-49" target="jNcLTLjzdyArPBF93-8H-52" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-49" value="val1 = valore per generare onda a 1Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-49" value="val1 = valore per generare onda a 1Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="720" y="2000" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-52" target="jNcLTLjzdyArPBF93-8H-54">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-52" target="jNcLTLjzdyArPBF93-8H-54" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="800" y="2170" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-52" value="sw1 == 1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-52" value="sw1 == 1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="2110" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-54" target="jNcLTLjzdyArPBF93-8H-57">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-54" target="jNcLTLjzdyArPBF93-8H-57" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-54" value="val2 = valore per generare onda a 2Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-54" value="val2 = valore per generare onda a 2Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="720" y="2220" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-57" target="jNcLTLjzdyArPBF93-8H-59">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-57" target="jNcLTLjzdyArPBF93-8H-59" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="800" y="2390" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-57" value="sw1 == 2" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-57" value="sw1 == 2" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="2330" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-59" target="jNcLTLjzdyArPBF93-8H-61">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-59" target="jNcLTLjzdyArPBF93-8H-61" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-59" value="val3 = valore per generare onda a 4Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-59" value="val3 = valore per generare onda a 4Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="720" y="2440" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-61" target="jNcLTLjzdyArPBF93-8H-62">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-61" target="jNcLTLjzdyArPBF93-8H-62" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="800" y="2610" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-61" value="sw1 == 3" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-61" value="sw1 == 3" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="815" y="2550" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-62" target="jNcLTLjzdyArPBF93-8H-44">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-62" target="jNcLTLjzdyArPBF93-8H-44" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="800" y="2740" />
@@ -212,52 +212,52 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-62" value="val4 = valore per generare onda a 8Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-62" value="val4 = valore per generare onda a 8Hz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="720" y="2660" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-63" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-63" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="820" y="1950" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-64" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-64" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="820" y="2170" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-65" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-65" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="820" y="2390" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-66" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-66" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="820" y="2610" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-67" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-67" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="970" y="2610" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-68" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-68" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="970" y="2390" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-69" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-69" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="970" y="2170" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-70" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-70" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="970" y="1950" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-72" target="jNcLTLjzdyArPBF93-8H-52">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-72" target="jNcLTLjzdyArPBF93-8H-52" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-72" value="val1 = valore per generare onda a 1kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-72" value="val1 = valore per generare onda a 1kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="960" y="2000" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-73" target="jNcLTLjzdyArPBF93-8H-57">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-73" target="jNcLTLjzdyArPBF93-8H-57" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-73" value="val2 = valore per generare onda a 2kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-73" value="val2 = valore per generare onda a 2kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="960" y="2220" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-74" target="jNcLTLjzdyArPBF93-8H-61">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-74" target="jNcLTLjzdyArPBF93-8H-61" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-74" value="val3 = valore per generare onda a 4kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-74" value="val3 = valore per generare onda a 4kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="960" y="2440" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-75" target="jNcLTLjzdyArPBF93-8H-44">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-75" target="jNcLTLjzdyArPBF93-8H-44" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1040" y="2740" />
@@ -269,10 +269,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-75" value="val4 = valore per generare onda a 8kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-75" value="val4 = valore per generare onda a 8kHz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="960" y="2660" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-61">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-61" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="980" y="2610" as="sourcePoint" />
             <mxPoint x="1040" y="2660" as="targetPoint" />
@@ -281,7 +281,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-57" target="jNcLTLjzdyArPBF93-8H-74">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-57" target="jNcLTLjzdyArPBF93-8H-74" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="980" y="2390" as="sourcePoint" />
             <mxPoint x="1037" y="2440" as="targetPoint" />
@@ -290,7 +290,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-52" target="jNcLTLjzdyArPBF93-8H-73">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-52" target="jNcLTLjzdyArPBF93-8H-73" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="990" y="2170" as="sourcePoint" />
             <mxPoint x="1037" y="2220" as="targetPoint" />
@@ -299,7 +299,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-47" target="jNcLTLjzdyArPBF93-8H-72">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-47" target="jNcLTLjzdyArPBF93-8H-72" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1000" y="1940" as="sourcePoint" />
             <mxPoint x="1067" y="1990" as="targetPoint" />
@@ -308,22 +308,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-87" value="Inizio ciclo while(1)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-87" value="Inizio ciclo while(1)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="930" y="1730" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-124" target="jNcLTLjzdyArPBF93-8H-128">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-124" target="jNcLTLjzdyArPBF93-8H-128" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-124" value="START" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-124" value="START" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="1540" y="130" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-125" value="ISR per il TIMER 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-125" value="ISR per il TIMER 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1540" y="100" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-128" target="jNcLTLjzdyArPBF93-8H-130">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-128" target="jNcLTLjzdyArPBF93-8H-130" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-128" target="jNcLTLjzdyArPBF93-8H-133">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-128" target="jNcLTLjzdyArPBF93-8H-133" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1880" y="300" />
@@ -332,19 +332,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-128" value="flag del canale 1 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-128" value="flag del canale 1 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="1495" y="240" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-129" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-130" target="jNcLTLjzdyArPBF93-8H-133">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-129" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-130" target="jNcLTLjzdyArPBF93-8H-133" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-130" value="- reset flag canale 1&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val1&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO0&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED0&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-130" value="- reset flag canale 1&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val1&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO0&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED0&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="1400" y="350" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-131" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-133" target="jNcLTLjzdyArPBF93-8H-135">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-131" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-133" target="jNcLTLjzdyArPBF93-8H-135" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-133" target="jNcLTLjzdyArPBF93-8H-138">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-133" target="jNcLTLjzdyArPBF93-8H-138" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1880" y="560" />
@@ -353,19 +353,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-133" value="flag del canale 2 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-133" value="flag del canale 2 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="1495" y="500" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-134" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-135" target="jNcLTLjzdyArPBF93-8H-138">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-134" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-135" target="jNcLTLjzdyArPBF93-8H-138" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-135" value="- reset flag canale 2&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val2&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO1&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED1&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-135" value="- reset flag canale 2&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val2&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO1&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED1&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="1400" y="610" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-138" target="jNcLTLjzdyArPBF93-8H-140">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-138" target="jNcLTLjzdyArPBF93-8H-140" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-138" target="jNcLTLjzdyArPBF93-8H-143">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-138" target="jNcLTLjzdyArPBF93-8H-143" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1880" y="820" />
@@ -374,19 +374,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-138" value="flag del canale 3 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-138" value="flag del canale 3 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="1495" y="760" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-139" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-140" target="jNcLTLjzdyArPBF93-8H-143">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-139" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-140" target="jNcLTLjzdyArPBF93-8H-143" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-140" value="- reset flag canale 3&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val3&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO2&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED2&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-140" value="- reset flag canale 3&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val3&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO2&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED2&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="1400" y="870" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-141" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-143" target="jNcLTLjzdyArPBF93-8H-145">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-141" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-143" target="jNcLTLjzdyArPBF93-8H-145" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-143" target="jNcLTLjzdyArPBF93-8H-146">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="jNcLTLjzdyArPBF93-8H-143" target="jNcLTLjzdyArPBF93-8H-146" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1880" y="1080" />
@@ -395,47 +395,47 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-143" value="flag del canale 4 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-143" value="flag del canale 4 attivo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#99FFFF;" parent="1" vertex="1">
           <mxGeometry x="1495" y="1020" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-144" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-145" target="jNcLTLjzdyArPBF93-8H-146">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-144" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-145" target="jNcLTLjzdyArPBF93-8H-146" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-145" value="- reset flag canale 4&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val4&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO3&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED3&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-145" value="- reset flag canale 4&lt;br&gt;- aggiorno soglia output compare incrementando al valore già presente il valore di &quot;val4&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;IO3&quot;&lt;br&gt;- toogle della porta GPIO associata all&#39;output &quot;LED3&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
           <mxGeometry x="1400" y="1130" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-146" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-146" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="1540" y="1280" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-147" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-147" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1550" y="310" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-148" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-148" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1550" y="575" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-149" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-149" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1550" y="827" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-150" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-150" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1550" y="1090" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-151" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-151" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1700" y="1050" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-152" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-152" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1700" y="795" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-153" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-153" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1700" y="525" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-154" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-154" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1700" y="265" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-156" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jNcLTLjzdyArPBF93-8H-155" target="jNcLTLjzdyArPBF93-8H-2">
+        <mxCell id="jNcLTLjzdyArPBF93-8H-156" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jNcLTLjzdyArPBF93-8H-155" target="jNcLTLjzdyArPBF93-8H-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jNcLTLjzdyArPBF93-8H-155" value="- attivare timer 4 con sorgente del clock interna.&lt;br&gt;- attivare tutti e quattro i canali in modalità&amp;nbsp;&quot;output compare no output&quot;&lt;br&gt;- impostare il prescaler a 4999 (valore che permette di generare un&#39;onda quadra sia a 1Hz che a 8kHz)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="1">
-          <mxGeometry x="680" y="225" width="480" height="95" as="geometry" />
+        <mxCell id="jNcLTLjzdyArPBF93-8H-155" value="- attivare timer 4 con sorgente del clock interna.&lt;br&gt;- attivare tutti e quattro i canali in modalità&amp;nbsp;&quot;output compare no output&quot;&lt;br&gt;- impostare il prescaler a 4999 (valore che permette di generare un&#39;onda quadra sia a 1Hz che a 8kHz)&lt;br&gt;- inizializzare porte GPIO in output per i pin &quot;IO0&quot;, &quot;IO1&quot;, &quot;IO2&quot; e &quot;IO3&quot; e per &quot;LED0&quot;, &quot;LED1&quot;, &quot;LED2&quot; e &quot;LED3&quot;&lt;br&gt;- inizializzare porte GPIO in input per &quot;SW0&quot;, &quot;SW1&quot;, &quot;SW2&quot; e &quot;SW3&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="1" vertex="1">
+          <mxGeometry x="680" y="225" width="480" height="115" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
