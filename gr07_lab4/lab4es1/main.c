@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
 #include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -54,13 +53,6 @@ LCD_HandleTypeDef hlcd;
 OPAMP_HandleTypeDef hopamp1;
 OPAMP_HandleTypeDef hopamp2;
 
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
 /* USER CODE BEGIN PV */
 int val1 = 8;
 int val2 = 4;
@@ -81,8 +73,6 @@ static void MX_ADC3_Init(void);
 static void MX_COMP1_Init(void);
 static void MX_LCD_Init(void);
 static void MX_TIM4_Init(void);
-void StartDefaultTask(void *argument);
-
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -130,62 +120,25 @@ int main(void)
   MX_ADC3_Init();
   MX_COMP1_Init();
   MX_LCD_Init();
+  MX_USB_DEVICE_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
-  /* Init scheduler */
-  osKernelInitialize();
-
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-
-  /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  	int sw1 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 3);
-  	int sw2 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 4);
-    int sw3 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 5);
-    int sw4 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 6);
+    int sw1,sw2,sw3,sw4;
 
-    if (sw1 == 0)	val1 = 8000;
-    if (sw2 == 0)	val2 = 4000;
-    if (sw3 == 0)	val3 = 2000;
-    if (sw4 == 0)	val4 = 1000;
+    LL_GPIO_WriteReg(GPIOB, MODER, LL_GPIO_ReadReg(GPIOB, MODER) | (1 << 6));  //set output mode
+    LL_GPIO_WriteReg(GPIOB, MODER, LL_GPIO_ReadReg(GPIOB, MODER) | (1 << 8));
+    LL_GPIO_WriteReg(GPIOB, MODER, LL_GPIO_ReadReg(GPIOB, MODER) | (1 << 10));
+    LL_GPIO_WriteReg(GPIOB, MODER, LL_GPIO_ReadReg(GPIOB, MODER) | (1 << 12));
 
-    LL_TIM_WriteReg(TIM4, CCR1, val1);  // set initial threshold CH1
-    LL_TIM_WriteReg(TIM4, CCR2, val2);  // set initial threshold CH2
-    LL_TIM_WriteReg(TIM4, CCR3, val3);  // set initial threshold CH3
-    LL_TIM_WriteReg(TIM4, CCR3, val4);  // set initial threshold CH4
+    LL_GPIO_WriteReg(GPIOE, MODER, LL_GPIO_ReadReg(GPIOE, MODER) | (1 << 0));  //set output mode
+    LL_GPIO_WriteReg(GPIOE, MODER, LL_GPIO_ReadReg(GPIOE, MODER) | (1 << 2));
+    LL_GPIO_WriteReg(GPIOE, MODER, LL_GPIO_ReadReg(GPIOE, MODER) | (1 << 4));
+    LL_GPIO_WriteReg(GPIOE, MODER, LL_GPIO_ReadReg(GPIOE, MODER) | (1 << 6));
 
     LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 1));   // delete OC flag CH1
     LL_TIM_WriteReg(TIM4, SR, LL_TIM_ReadReg(TIM4, SR) & ~(1 << 2));   // delete OC flag CH2
@@ -207,14 +160,14 @@ int main(void)
     LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 12));
     LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 13));
 
-    LL_TIM_WriteReg(TIM4, CR1, LL_TIM_ReadReg(TIM4, CR1) | (1 << 1));  // counter enable
+    LL_TIM_WriteReg(TIM4, CR1, LL_TIM_ReadReg(TIM4, CR1) | (1 << 0));  // counter enable
 
 
     while (1)
     {
-      /* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-      /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
 
       sw1 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 3);
       sw2 =  LL_GPIO_ReadReg(GPIOB,IDR) & (1 << 4);
@@ -648,7 +601,7 @@ static void MX_TIM4_Init(void)
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM4);
 
   /* TIM4 interrupt Init */
-  NVIC_SetPriority(TIM4_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
+  NVIC_SetPriority(TIM4_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
   NVIC_EnableIRQ(TIM4_IRQn);
 
   /* USER CODE BEGIN TIM4_Init 1 */
@@ -672,6 +625,8 @@ static void MX_TIM4_Init(void)
   LL_TIM_OC_DisableFast(TIM4, LL_TIM_CHANNEL_CH2);
   LL_TIM_OC_Init(TIM4, LL_TIM_CHANNEL_CH3, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM4, LL_TIM_CHANNEL_CH3);
+  LL_TIM_OC_Init(TIM4, LL_TIM_CHANNEL_CH4, &TIM_OC_InitStruct);
+  LL_TIM_OC_DisableFast(TIM4, LL_TIM_CHANNEL_CH4);
   LL_TIM_SetOCRefClearInputSource(TIM4, LL_TIM_OCREF_CLR_INT_NC);
   LL_TIM_DisableExternalClock(TIM4);
   LL_TIM_ConfigETR(TIM4, LL_TIM_ETR_POLARITY_NONINVERTED, LL_TIM_ETR_PRESCALER_DIV1, LL_TIM_ETR_FILTER_FDIV1);
@@ -775,26 +730,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-__weak void StartDefaultTask(void *argument)
-{
-  /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */
-}
 
 /**
   * @brief  Period elapsed callback in non blocking mode
