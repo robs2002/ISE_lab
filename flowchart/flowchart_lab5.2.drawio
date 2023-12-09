@@ -1,9 +1,84 @@
-<mxfile host="app.diagrams.net" modified="2023-12-09T21:54:15.643Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15" version="22.1.7" etag="E8IZrfX-J5tkb-424dW2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-09T22:27:02.265Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15" etag="aYJyEcQ4lJgPs685-N2j" version="22.1.7" type="github">
   <diagram name="Pagina-1" id="nGPAaurNC0Zqhz78jgdj">
-    <mxGraphModel>
+    <mxGraphModel dx="1222" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="uSQIK2TaPtm-EKONy59K-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-2" target="uSQIK2TaPtm-EKONy59K-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-2" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-4" target="uSQIK2TaPtm-EKONy59K-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-4" value="- attivare kernel FreeRTOS&lt;br&gt;- creare Task1&lt;br&gt;&amp;nbsp;- creare Task2&lt;br&gt;- attivare il pin GPIO collegato allo switch 1 in modalità INPUT&lt;br&gt;- attivare il pin GPIO collegato allo switch 8 &amp;nbsp;in modalità INPUT&lt;br&gt;- abilitare interrupt per lo switch 1&lt;br&gt;- abilitare interrupt per lo switch 8&lt;br&gt;- attivare una osQueue&lt;br&gt;- abilitare la comunicazione seriale" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-5" value="FINE" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-7" target="uSQIK2TaPtm-EKONy59K-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-7" value="START Task1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-9" target="uSQIK2TaPtm-EKONy59K-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-9" value="- inserisci un valore nella osQueue&lt;br&gt;- scrivi sul terminale che è stato aggiunto un nuovo elemento sulla osQueue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-10" value="FINE Tas1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="720" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-12" target="uSQIK2TaPtm-EKONy59K-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-12" value="START Task2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="860" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-14" target="uSQIK2TaPtm-EKONy59K-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-14" value="- prelevare un valore nella osQueue&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- scrivi sul terminale che è stato prelevato un nuovo elemento dalla osQueue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="960" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-15" value="FINE Tas2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-17" target="uSQIK2TaPtm-EKONy59K-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-17" value="START&lt;br&gt;interrupt sw0" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-19" target="uSQIK2TaPtm-EKONy59K-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-19" value="setta il flag di task Notification per sbloccare il Task1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="560" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-20" value="FINE&lt;br&gt;interrupt sw0" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="720" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-22" target="uSQIK2TaPtm-EKONy59K-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-22" value="START&lt;br&gt;interrupt sw7" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="860" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uSQIK2TaPtm-EKONy59K-24" target="uSQIK2TaPtm-EKONy59K-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-24" value="setta il flag di task Notification per sbloccare il Task2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="960" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uSQIK2TaPtm-EKONy59K-25" value="FINE&lt;br&gt;interrupt sw7" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1120" width="120" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
