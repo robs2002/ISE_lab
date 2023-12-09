@@ -1,9 +1,109 @@
-<mxfile host="app.diagrams.net" modified="2023-12-09T21:54:47.385Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15" version="22.1.7" etag="Gjr1KgABS2QQzwjWE3gW" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-09T22:38:27.937Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15" etag="o8krD7IsTY9OWNORySXw" version="22.1.7" type="github">
   <diagram name="Pagina-1" id="hlYgKEK7DjjqkB8cqxJR">
-    <mxGraphModel>
+    <mxGraphModel dx="690" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-2" target="fNa-zSRcwuD-DIFx45gE-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-2" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-4" target="fNa-zSRcwuD-DIFx45gE-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-4" value="- attivare kernel FreeRTOS&lt;br&gt;- creare Task1&lt;br&gt;&amp;nbsp;- creare Task2&lt;br&gt;- creare Task3&lt;br&gt;- attivare mutex/semaforo&lt;br&gt;- creazione contatore con valore iniziale pari a 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-5" value="FINE" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-7" target="fNa-zSRcwuD-DIFx45gE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-7" value="START Task1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-9" target="fNa-zSRcwuD-DIFx45gE-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-9" value="- acquisire mutex&lt;br&gt;- notificare esecuzione di acquisto mutex tramite la seriale" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-10" value="FINE Tas1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="890" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-12" target="fNa-zSRcwuD-DIFx45gE-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-12" value="START Task2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1040" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-14" value="- acquisire mutex&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- notificare esecuzione di acquisto mutex tramite la seriale&lt;br&gt;- rilasciare mutex&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- attendere 0.5 secondi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1140" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-15" value="FINE Tas2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-9" target="fNa-zSRcwuD-DIFx45gE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-18" target="fNa-zSRcwuD-DIFx45gE-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-18" target="fNa-zSRcwuD-DIFx45gE-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="675" />
+              <mxPoint x="640" y="790" />
+              <mxPoint x="400" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-18" value="contatore = 3" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="650" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-20" target="fNa-zSRcwuD-DIFx45gE-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-20" value="diminuire la priorità del Task1 di un livello" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="730" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-22" target="fNa-zSRcwuD-DIFx45gE-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-22" value="- rilasciare mutex&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- attendere 0.5 secondi&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- incrementare contatore" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="810" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-25" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="354" y="700" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-26" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="650" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-30" target="fNa-zSRcwuD-DIFx45gE-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-30" value="START Task3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fNa-zSRcwuD-DIFx45gE-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-32" value="- notificare attivazione task tramite la seriale&lt;br&gt;- attendere 0.5 secondi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1580" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="fNa-zSRcwuD-DIFx45gE-33" value="FINE Tas3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1740" width="120" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
