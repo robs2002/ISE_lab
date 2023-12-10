@@ -162,23 +162,30 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles EXTI line3 interrupt.
+  * @brief This function handles EXTI line[9:5] interrupts.
   */
-void EXTI3_IRQHandler(void)
+void EXTI9_5_IRQHandler(void)
 {
-  /* USER CODE BEGIN EXTI3_IRQn 0 */
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
 
-  /* USER CODE END EXTI3_IRQn 0 */
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_3) != RESET)
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_5) != RESET)
   {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_3);
-    /* USER CODE BEGIN LL_EXTI_LINE_3 */
-    //osThreadFlagsSet(myTask1Handle,1);
-    /* USER CODE END LL_EXTI_LINE_3 */
+    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_5);
+    /* USER CODE BEGIN LL_EXTI_LINE_5 */
+    osThreadFlagsSet(myTask1Handle,1);
+    /* USER CODE END LL_EXTI_LINE_5 */
   }
-  /* USER CODE BEGIN EXTI3_IRQn 1 */
+  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_7) != RESET)
+  {
+    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_7);
+    /* USER CODE BEGIN LL_EXTI_LINE_7 */
+    osThreadFlagsSet(myTask2Handle,1);
+    /* USER CODE END LL_EXTI_LINE_7 */
+  }
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
 
-  /* USER CODE END EXTI3_IRQn 1 */
+  /* USER CODE END EXTI9_5_IRQn 1 */
 }
 
 /**
@@ -193,33 +200,6 @@ void TIM1_UP_TIM16_IRQHandler(void)
   /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 1 */
 
   /* USER CODE END TIM1_UP_TIM16_IRQn 1 */
-}
-
-/**
-  * @brief This function handles EXTI line[15:10] interrupts.
-  */
-void EXTI15_10_IRQHandler(void)
-{
-  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
-
-  /* USER CODE END EXTI15_10_IRQn 0 */
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_10) != RESET)
-  {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_10);
-    /* USER CODE BEGIN LL_EXTI_LINE_10 */
-    osThreadFlagsSet(myTask1Handle,1);
-    /* USER CODE END LL_EXTI_LINE_10 */
-  }
-  if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_11) != RESET)
-  {
-    LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_11);
-    /* USER CODE BEGIN LL_EXTI_LINE_11 */
-    osThreadFlagsSet(myTask2Handle,1);
-    /* USER CODE END LL_EXTI_LINE_11 */
-  }
-  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
-
-  /* USER CODE END EXTI15_10_IRQn 1 */
 }
 
 /**

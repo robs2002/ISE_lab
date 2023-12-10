@@ -1,0 +1,9 @@
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_bus.h:563:22:LL_AHB2_GRP1_EnableClock	1
+../Src/main.c:704:13:StartDefaultTask	1
+../Src/main.c:724:6:StartTask1	1
+../Src/main.c:744:6:StartTask2	1
+../Src/main.c:233:6:SystemClock_Config	1
+../Src/main.c:282:6:PeriphCommonClock_Config	1
+../Src/main.c:133:5:main	1
+../Src/main.c:765:6:HAL_TIM_PeriodElapsedCallback	2
+../Src/main.c:782:6:Error_Handler	1

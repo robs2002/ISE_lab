@@ -759,27 +759,27 @@ void StartTask1(void *argument)
 {
   /* USER CODE BEGIN StartTask1 */
 	//MX_USB_DEVICE_Init();
-	int executionCount = 1;
+	int executionCount = 1;  // volte che eseguiamo il codice
   /* Infinite loop */
   for(;;)
   {
-	//osMutexAcquire(myMutexHandle,osWaitForever);
-	osSemaphoreAcquire(myBinarySemHandle,osWaitForever);
+	osMutexAcquire(myMutexHandle,osWaitForever); // prendiamo il mutex
+	//osSemaphoreAcquire(myBinarySemHandle,osWaitForever); // prendiamo il semaforo
 
-	if (executionCount == 3) {
-		osThreadSetPriority(myTask1Handle, osThreadGetPriority(myTask1Handle) - 1);
+	if (executionCount == 3) { // controlliamo se abbiamo eseguito tre volte il task
+		osThreadSetPriority(myTask1Handle, osThreadGetPriority(myTask1Handle) - 1); // abbassiamo la priorità del task di 1
 	}
 
 	usbserialPrintf("Task1 executed %d times\r\n", executionCount);
 
-	LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 10));
+	//LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 10)); // usato per controllo senza seriale
 
-	//osMutexRelease(myMutexHandle);
-	osSemaphoreRelease(myBinarySemHandle);
+	osMutexRelease(myMutexHandle); // rilasciamo il mutex
+	//osSemaphoreRelease(myBinarySemHandle); // rlasciamo il semaforo
 
-	HAL_Delay(500);
+	HAL_Delay(500); // delay di mezzo secondo
 
-	executionCount++;
+	executionCount++; // aumentiamo il numero di esecuzione del task
   }
   /* USER CODE END StartTask1 */
 }
@@ -798,17 +798,17 @@ void StartTask2(void *argument)
   /* Infinite loop */
   for(;;)
   {
-		 //osMutexAcquire(myMutexHandle,osWaitForever);
-		 osSemaphoreAcquire(myBinarySemHandle,osWaitForever);
+		 osMutexAcquire(myMutexHandle,osWaitForever); // prendiamo il mutex
+		 //osSemaphoreAcquire(myBinarySemHandle,osWaitForever); // prendiamo il semaforo
 
 		 usbserialPrint("Task2 executed\r\n");
 
-		 LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 11));
+		 //LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 11)); // usato per controllo senza seriale
 
-		 //osMutexRelease(myMutexHandle);
-		 osSemaphoreRelease(myBinarySemHandle);
+		 osMutexRelease(myMutexHandle); // rilasciamo il mutex
+		 //osSemaphoreRelease(myBinarySemHandle); // rlasciamo il semaforo
 
-		 HAL_Delay(500);
+		 HAL_Delay(500); // delay di mezzo secondo
   }
   /* USER CODE END StartTask2 */
 }
@@ -823,15 +823,15 @@ void StartTask2(void *argument)
 void StartTask3(void *argument)
 {
   /* USER CODE BEGIN StartTask3 */
-	MX_USB_DEVICE_Init();
+	MX_USB_DEVICE_Init(); // inizializzo l'uscita seriale del lato user
   /* Infinite loop */
   for(;;)
   {
 	  	usbserialPrint("Task3 executed\r\n");
 
-	    LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 12));
+	    //LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 12)); // usato per controllo senza seriale
 
-	  	HAL_Delay(500);
+	  	HAL_Delay(500); // delay di mezzo secondo
   }
   /* USER CODE END StartTask3 */
 }

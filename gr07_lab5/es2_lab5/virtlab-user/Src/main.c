@@ -36,11 +36,18 @@ typedef StaticQueue_t osStaticMessageQDef_t;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define deb_delay 20
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+/*enum SwitchState{
+	LOW,
+	TRANSITION,           macchina astati per debouncing
+	HIGH
+};
+volatile enum SwitchState switch1State = LOW;
+volatile enum SwitchState switch8State = LOW;   */
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -92,7 +99,7 @@ osThreadId_t myTask2Handle;
 const osThreadAttr_t myTask2_attributes = {
   .name = "myTask2",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityBelowNormal,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for myQueue */
 osMessageQueueId_t myQueueHandle;
@@ -173,7 +180,6 @@ int main(void)
   MX_COMP1_Init();
   MX_LCD_Init();
   /* USER CODE BEGIN 2 */
-  MX_USB_DEVICE_Init();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -689,6 +695,13 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(IO15_GPIO_Port, &GPIO_InitStruct);
 
   /**/
+  GPIO_InitStruct.Pin = SW6_Pin|SW7_Pin|SW0_Pin|SW1_Pin
+                          |SW3_Pin|SW5_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_DOWN;
+  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /**/
   GPIO_InitStruct.Pin = IO24_Pin|IO25_Pin|IO26_Pin|IO27_Pin
                           |IO28_Pin|IO29_Pin|IO30_Pin|IO31_Pin
                           |IO16_Pin|IO17_Pin|IO18_Pin|IO19_Pin
@@ -704,23 +717,13 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = SW1_Pin|SW2_Pin|SW3_Pin|SW4_Pin
-                          |SW5_Pin;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_DOWN;
-  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE5);
 
   /**/
-  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE10);
+  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE7);
 
   /**/
-  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE11);
-
-  /**/
-  LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, LL_SYSCFG_EXTI_LINE3);
-
-  /**/
-  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_10;
+  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_5;
   EXTI_InitStruct.Line_32_63 = LL_EXTI_LINE_NONE;
   EXTI_InitStruct.LineCommand = ENABLE;
   EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
@@ -728,7 +731,7 @@ static void MX_GPIO_Init(void)
   LL_EXTI_Init(&EXTI_InitStruct);
 
   /**/
-  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_11;
+  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_7;
   EXTI_InitStruct.Line_32_63 = LL_EXTI_LINE_NONE;
   EXTI_InitStruct.LineCommand = ENABLE;
   EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
@@ -736,36 +739,20 @@ static void MX_GPIO_Init(void)
   LL_EXTI_Init(&EXTI_InitStruct);
 
   /**/
-  EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_3;
-  EXTI_InitStruct.Line_32_63 = LL_EXTI_LINE_NONE;
-  EXTI_InitStruct.LineCommand = ENABLE;
-  EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
-  EXTI_InitStruct.Trigger = LL_EXTI_TRIGGER_RISING;
-  LL_EXTI_Init(&EXTI_InitStruct);
+  LL_GPIO_SetPinPull(SW2_GPIO_Port, SW2_Pin, LL_GPIO_PULL_DOWN);
 
   /**/
-  LL_GPIO_SetPinPull(SW6_GPIO_Port, SW6_Pin, LL_GPIO_PULL_DOWN);
+  LL_GPIO_SetPinPull(SW4_GPIO_Port, SW4_Pin, LL_GPIO_PULL_DOWN);
 
   /**/
-  LL_GPIO_SetPinPull(SW7_GPIO_Port, SW7_Pin, LL_GPIO_PULL_DOWN);
+  LL_GPIO_SetPinMode(SW2_GPIO_Port, SW2_Pin, LL_GPIO_MODE_INPUT);
 
   /**/
-  LL_GPIO_SetPinPull(SW0_GPIO_Port, SW0_Pin, LL_GPIO_PULL_DOWN);
-
-  /**/
-  LL_GPIO_SetPinMode(SW6_GPIO_Port, SW6_Pin, LL_GPIO_MODE_INPUT);
-
-  /**/
-  LL_GPIO_SetPinMode(SW7_GPIO_Port, SW7_Pin, LL_GPIO_MODE_INPUT);
-
-  /**/
-  LL_GPIO_SetPinMode(SW0_GPIO_Port, SW0_Pin, LL_GPIO_MODE_INPUT);
+  LL_GPIO_SetPinMode(SW4_GPIO_Port, SW4_Pin, LL_GPIO_MODE_INPUT);
 
   /* EXTI interrupt init*/
-  NVIC_SetPriority(EXTI3_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(EXTI3_IRQn);
-  NVIC_SetPriority(EXTI15_10_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
-  NVIC_EnableIRQ(EXTI15_10_IRQn);
+  NVIC_SetPriority(EXTI9_5_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),5, 0));
+  NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -805,19 +792,26 @@ __weak void StartDefaultTask(void *argument)
 void StartTask1(void *argument)
 {
   /* USER CODE BEGIN StartTask1 */
-	//MX_USB_DEVICE_Init();
-	uint16_t value=0;
+	MX_USB_DEVICE_Init();
+	uint16_t scr=0;
 	int count;
   /* Infinite loop */
   for(;;)
   {
-		osThreadFlagsWait(1, osFlagsWaitAny, osWaitForever);
-		osMessageQueuePut(myQueueHandle, (const void *)&value, 0, 0);
+
+	osThreadFlagsWait(1, osFlagsWaitAny, osWaitForever);
+	if(osMessageQueuePut(myQueueHandle, &scr, 0, 0) == osOK) {
 		count = osMessageQueueGetCount(myQueueHandle);
-		usbserialPrintf("Produttore attivato. Valore inserito: %lu. Elementi nella coda: %d.\r\n", value, count);
-		LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 10));
-		osDelay(1000);
-		value++;
+		usbserialPrintf("Produttore attivato. Valore inserito: %lu. Elementi nella coda: %lu.\r\n", scr, count);
+		LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 10));
+		scr++;
+	}
+	else {
+		usbserialPrint("Produttore attivato. Errore nell' inserire un valore in coda.\r\n");
+		LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) & ~(1 << 10));
+	}
+	osDelay(1000);
+
   }
   /* USER CODE END StartTask1 */
 }
@@ -836,16 +830,16 @@ void StartTask2(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  osThreadFlagsWait(1, osFlagsWaitAny, osWaitForever);
-	  if (osMessageQueueGet(myQueueHandle, &value, NULL, 0) == osOK) {
-		usbserialPrintf("Consumatore attivato. Valore letto: %lu. Elementi nella coda: %lu.\r\n", value, osMessageQueueGetCount(myQueueHandle));
-		LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 11));
-	  }
-	  else {
-		  usbserialPrintf("Consumatore attivato. Nessuna lettura avvenuta.\r\n");
-		  LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) ^ (1 << 12));
-      }
-	  osDelay(1000);
+	osThreadFlagsWait(1, osFlagsWaitAny, osWaitForever);
+	if (osMessageQueueGet(myQueueHandle, &value, NULL, 0) == osOK) {
+	  usbserialPrintf("Consumatore attivato. Valore letto: %lu. Elementi nella coda: %lu.\r\n", value, osMessageQueueGetCount(myQueueHandle));
+	  LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) | (1 << 11));
+	}
+	else {
+	  usbserialPrint("Consumatore attivato. Nessuna lettura avvenuta.\r\n");
+	  LL_GPIO_WriteReg(GPIOC, ODR, LL_GPIO_ReadReg(GPIOC, ODR) & ~(1 << 11));
+	}
+	osDelay(1000);
   }
   /* USER CODE END StartTask2 */
 }
