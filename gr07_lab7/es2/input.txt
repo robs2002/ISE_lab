@@ -1,0 +1,4 @@
+intToBin 152
+binToInt 10011
+intToHex 76
+hexToInt FB3
